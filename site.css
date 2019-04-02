@@ -1,12 +1,18 @@
 html {
     background: #ecf0f1;
 }
-h1, h3 {
+h1, h2, h3, h4, h5, h6 {
     text-align: center;
+    font-family: 'Merriweather', serif;
 }
 h1 {
   font-size: 5em;
+  margin-bottom: 0.3em;
 }
 h3 {
   font-size: 2em;
+}
+p.intro{
+    width: 80%;
+    margin: 15% auto 5%;
 }
