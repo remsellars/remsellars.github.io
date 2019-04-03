@@ -1,6 +1,14 @@
+html,body {
+    padding: 0;
+    margin: 0;
+}
+* {
+    box-sizing: inherit;
+}
 html {
     background: #ecf0f1;
     font-family: sans-serif;
+    box-sizing: border-box;
 }
 h1, h2, h3, h4, h5, h6 {
     text-align: center;
@@ -17,3 +25,10 @@ p.intro{
     width: 80%;
     margin: 15% auto 5%;
 }
+p.blurb{
+    height: 10vh;
+    padding: 0.5em;
+    margin: 0;
+}
+
+#mapid { height: 90vh; }
