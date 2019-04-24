@@ -1,9 +1,24 @@
+var myGeoJSONPath = '/custom.geo.json';
+var myCustomStyle = {
+    stroke: false,
+    fill: true,
+    fillColor: '#ff7700',
+    fillOpacity: 0.15
+}
+
 var mymap = L.map('mapid').setView([53.505, -0.09], 4);
+
+$.getJSON(myGeoJSONPath, function (data) {
+    L.geoJson(data, {
+        clickable: false,
+        style: myCustomStyle
+    }).addTo(mymap);
+})
 
 L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}', {
     attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
     maxZoom: 12,
-    id: 'mapbox.streets',
+    id: 'mapbox.light',
     accessToken: 'pk.eyJ1IjoicmVtc2VsbGFycyIsImEiOiJjanUxcW5qbWswNDRpNDRtbjFxejJvdm94In0.XfKCrjsup1mWVoS5Lo6sOw'
 }).addTo(mymap);
 
