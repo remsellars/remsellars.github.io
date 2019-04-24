@@ -1,4 +1,4 @@
-var myGeoJSONPath = '/custom.geo.json';
+var myGeoJSONPath = './custom.geo.json';
 var myCustomStyle = {
     stroke: false,
     fill: true,
@@ -8,12 +8,16 @@ var myCustomStyle = {
 
 var mymap = L.map('mapid').setView([53.505, -0.09], 4);
 
-$.getJSON(myGeoJSONPath, function (data) {
-    L.geoJson(data, {
-        clickable: false,
-        style: myCustomStyle
-    }).addTo(mymap);
-})
+fetch(myGeoJSONPath)
+    .then(function (response) {
+        return response.json();
+    })
+    .then(function (data) {
+        L.geoJson(data, {
+            clickable: false,
+            style: myCustomStyle
+        }).addTo(mymap);
+    });
 
 L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}', {
     attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
