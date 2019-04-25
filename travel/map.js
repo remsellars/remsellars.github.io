@@ -2,8 +2,8 @@ var myGeoJSONPath = './custom.geo.json';
 var myCustomStyle = {
     stroke: false,
     fill: true,
-    fillColor: '#ff7700',
-    fillOpacity: 0.15
+    fillColor: 'purple',
+    fillOpacity: 0.1
 }
 
 var mymap = L.map('mapid').setView([53.505, -0.09], 4);
@@ -27,8 +27,8 @@ L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={
 }).addTo(mymap);
 
 const cityStyle = {
-    color: 'red',
-    fillColor: '#f03',
+    color: 'purple',
+    fillColor: '#purple',
     fillOpacity: 0.5,
     radius: 5000
 };
@@ -36,6 +36,8 @@ const cityStyle = {
 // UK
 const london = L.circle([51.501, -0.122], cityStyle).addTo(mymap);
 const edinbrugh = L.circle([55.9533, -3.1883], cityStyle).addTo(mymap);
+const sheffield = L.circle([53.3811, -1.4701], cityStyle).addTo(mymap);
+const jersey = L.circle([49.1805, -2.1032], cityStyle).addTo(mymap);
 
 //Spanish
 const barcelona = L.circle([41.3851, 2.1734], cityStyle).addTo(mymap);
