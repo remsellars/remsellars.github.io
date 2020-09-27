@@ -6,4 +6,4 @@ to run /travel locally:
 python -m http.server
 
 
-[View Site](remsellars.github.io)
+[View Site](http://remsellars.github.io/)
