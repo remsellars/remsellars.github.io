@@ -2,38 +2,68 @@ html,body {
     padding: 0;
     margin: 0;
 }
+
 * {
     box-sizing: inherit;
 }
+
 html {
-    background: #ecf0f1;
-    font-family: sans-serif;
-    box-sizing: border-box;
+  background: #ecf0f1;
+  font-family: sans-serif;
+  box-sizing: border-box;
 }
+
 h1, h2, h3, h4, h5, h6 {
-    text-align: center;
+    text-align: left;
     font-family: 'Merriweather', serif;
 }
-h1 {
-  font-size: 5em;
-  margin-bottom: 0.3em;
+
+.content{
+  padding: 1em;
 }
-h3 {
-  font-size: 2em;
+
+.name{
+  width: 30%;
 }
-p.intro{
-    width: 80%;
-    margin: 3em auto 1em;
-}
-p.blurb{
-    height: 10vh;
-    padding: 0.5em;
-    margin: 0;
+
+.intro{
+  width: 30%;
 }
 
 .banner{
-    background-image: url('./rachel.jpg');
-    background-size: cover;
-    height: 400px;
-    background-position: center;
+  background-image: url('./rachel.jpg');
+  background-size: cover;
+  height: 400px;
+  background-position: center;
+}
+
+.footer{
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  padding: 1em;
+  text-align: center;
+}
+
+.fa {
+  padding: 20px;
+  font-size: 30px;
+  width: 50px;
+  text-align: center;
+  text-decoration: none;
+}
+
+.fa:hover {
+  opacity: 0.7;
+}
+
+.fa-linkedin {
+  background: #0e76a8;
+  color: white;
+}
+
+.fa-github {
+  background: #000000;
+  color: white;
 }
