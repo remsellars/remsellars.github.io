@@ -1,10 +1,10 @@
 html,body {
-    padding: 0;
-    margin: 0;
+  padding: 0;
+  margin: 0;
 }
 
 * {
-    box-sizing: inherit;
+  box-sizing: inherit;
 }
 
 html {
@@ -14,12 +14,14 @@ html {
 }
 
 h1, h2, h3, h4, h5, h6 {
-    text-align: left;
-    font-family: 'Merriweather', serif;
+  text-align: left;
+  font-family: 'Merriweather', serif;
 }
 
 .content{
   padding: 1em;
+  padding-top: 32em;
+  color: white;
 }
 
 .name{
@@ -33,7 +35,7 @@ h1, h2, h3, h4, h5, h6 {
 .banner{
   background-image: url('./rachel.jpg');
   background-size: cover;
-  height: 400px;
+  height: 800px;
   background-position: center;
 }
 
